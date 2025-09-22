@@ -50,5 +50,18 @@ namespace TestProject
             //Arrange, Act & Assert
             new MC("1234567");
         }
+
+        [TestMethod]
+        public void TestBrobizz()
+        {
+            //Arrange
+            MC car = new MC("       ", true);
+
+            //Act
+            double price = car.Price();
+
+            //Assert
+            Assert.AreEqual(108, price, 0.01);
+        }
     }
 }

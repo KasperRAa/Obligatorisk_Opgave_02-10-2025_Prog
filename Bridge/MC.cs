@@ -11,13 +11,14 @@ namespace Bridge
     /// </summary>
     public class MC : Vehicle
     {
-        public MC(string licenseplate) : base(licenseplate) { }
+        public MC(string licenseplate) : base(licenseplate, false) { }
+        public MC(string licenseplate, bool isBrobizz) : base(licenseplate, isBrobizz) { }
 
         /// <summary>
-        /// Returns the price of a ticket.
+        /// Returns the price of the ticket.
         /// </summary>
-        /// <returns>120</returns>
-        public override double Price() => 120;
+        /// <returns>120 * Factors</returns>
+        public override double StandardPrice() => 120;
         /// <summary>
         /// Returns the type of MoterCycle.
         /// </summary>

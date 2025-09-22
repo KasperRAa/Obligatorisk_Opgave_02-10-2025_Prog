@@ -50,5 +50,18 @@ namespace TestProject
             //Arrange, Act & Assert
             new Car("1234567");
         }
+
+        [TestMethod]
+        public void TestBrobizz()
+        {
+            //Arrange
+            Car car = new Car("       ", true);
+
+            //Act
+            double price = car.Price();
+
+            //Assert
+            Assert.AreEqual(207, price, 0.01);
+        }
     }
 }

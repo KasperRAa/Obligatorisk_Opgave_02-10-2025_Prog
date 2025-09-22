@@ -17,18 +17,31 @@ namespace Bridge
         /// </summary>
         public readonly DateTime Date;
 
-        public Vehicle(string licenseplate)
+        /// <summary>
+        /// The multiplication factor on the price of a ticket
+        /// </summary>
+        protected readonly double priceFactor;
+
+        public Vehicle(string licenseplate, bool isBrobizz)
         {
             if (licenseplate.Length > 7) throw new ArgumentException($"The licenseplate '{licenseplate}' is too long.");
             Licenseplate = licenseplate;
             Date = DateTime.Now;
+
+            if (isBrobizz) priceFactor = 0.9;
+            else priceFactor = 1.0;
         }
 
         /// <summary>
-        /// Returns the price of a ticket.
+        /// Returns the price of the ticket.
         /// </summary>
-        /// <returns>Price of a ticket</returns>
-        public abstract double Price();
+        /// <returns>Price of the ticket</returns>
+        public double Price() => StandardPrice() * priceFactor;
+        /// <summary>
+        /// The standard price of a ticket.
+        /// </summary>
+        /// <returns>Standard price of a ticket</returns>
+        public abstract double StandardPrice();
 
         /// <summary>
         /// Returns the type of vehicle.

@@ -11,13 +11,14 @@ namespace Bridge
     /// </summary>
     public class Car : Vehicle
     {
-        public Car(string licenseplate) : base(licenseplate) { }
+        public Car(string licenseplate) : base(licenseplate, false) { }
+        public Car(string licenseplate, bool isBrobizz) : base(licenseplate, isBrobizz) { }
 
         /// <summary>
-        /// Returns the price of a ticket.
+        /// Returns the price of the ticket.
         /// </summary>
-        /// <returns>230</returns>
-        public override double Price() => 230;
+        /// <returns>230 * Factors</returns>
+        public override double StandardPrice() => 230;
         /// <summary>
         /// Returns the type of a Car.
         /// </summary>
