@@ -11,13 +11,23 @@ namespace Bridge
     /// </summary>
     public class Car : Vehicle
     {
-        public Car(string licenseplate) : base(licenseplate, false) { }
-        public Car(string licenseplate, bool isBrobizz) : base(licenseplate, isBrobizz) { }
+        /// <summary>
+        /// Standard-Constructor for Car-ticket.
+        /// </summary>
+        /// <param name="licenseplate">The licenseplate</param>
+        public Car(string licenseplate) : base(licenseplate, false, DateTime.Now) { }
+        /// <summary>
+        /// Detailed Constructor for Car-ticket.
+        /// </summary>
+        /// <param name="licenseplate">The licenseplate</param>
+        /// <param name="isBrobizz">Whether Brobizz is applied</param>
+        /// <param name="dateTime">The date of the ticket</param>
+        public Car(string licenseplate, bool isBrobizz, DateTime dateTime) : base(licenseplate, isBrobizz, dateTime) { }
 
         /// <summary>
-        /// Returns the price of the ticket.
+        /// Returns the standard price of the ticket.
         /// </summary>
-        /// <returns>230 * Factors</returns>
+        /// <returns>230</returns>
         public override double StandardPrice() => 230;
         /// <summary>
         /// Returns the type of a Car.

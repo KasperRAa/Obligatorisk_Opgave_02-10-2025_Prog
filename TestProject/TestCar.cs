@@ -1,6 +1,7 @@
 ﻿using Bridge;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 namespace TestProject
 {
     [TestClass]
+    [ExcludeFromCodeCoverage]
     public class TestCar
     {
         [TestMethod]
@@ -55,7 +57,7 @@ namespace TestProject
         public void TestBrobizz()
         {
             //Arrange
-            Car car = new Car("       ", true);
+            Car car = new Car("       ", true, new DateTime(0));
 
             //Act
             double price = car.Price();

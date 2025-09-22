@@ -11,13 +11,23 @@ namespace Bridge
     /// </summary>
     public class MC : Vehicle
     {
-        public MC(string licenseplate) : base(licenseplate, false) { }
-        public MC(string licenseplate, bool isBrobizz) : base(licenseplate, isBrobizz) { }
+        /// <summary>
+        /// Standard-Constructor for MC-ticket.
+        /// </summary>
+        /// <param name="licenseplate">The licenseplate</param>
+        public MC(string licenseplate) : base(licenseplate, false, DateTime.Now) { }
+        /// <summary>
+        /// Detailed Constructor for MC-ticket.
+        /// </summary>
+        /// <param name="licenseplate">The licenseplate</param>
+        /// <param name="isBrobizz">Whether Brobizz is applied</param>
+        /// <param name="dateTime">The date of the ticket</param>
+        public MC(string licenseplate, bool isBrobizz, DateTime dateTime) : base(licenseplate, isBrobizz, dateTime) { }
 
         /// <summary>
-        /// Returns the price of the ticket.
+        /// Returns the standard price of the ticket.
         /// </summary>
-        /// <returns>120 * Factors</returns>
+        /// <returns>120</returns>
         public override double StandardPrice() => 120;
         /// <summary>
         /// Returns the type of MoterCycle.

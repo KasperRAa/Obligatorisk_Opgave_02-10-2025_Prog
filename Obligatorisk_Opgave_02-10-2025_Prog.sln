@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36429.23 d17.14
+VisualStudioVersion = 17.14.36429.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{D9B91E18-3F9E-41DA-BDDF-AC5F4BD1C345}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{968BC6C4-4F0F-4916-807B-561BB0FBEFF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreBaeltTicketLibrary", "StoreBaeltTicketLibrary\StoreBaeltTicketLibrary.csproj", "{40C434F0-C34D-4179-85DC-1A2B2086DECF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{968BC6C4-4F0F-4916-807B-561BB0FBEFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{968BC6C4-4F0F-4916-807B-561BB0FBEFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{968BC6C4-4F0F-4916-807B-561BB0FBEFF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40C434F0-C34D-4179-85DC-1A2B2086DECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C434F0-C34D-4179-85DC-1A2B2086DECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C434F0-C34D-4179-85DC-1A2B2086DECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C434F0-C34D-4179-85DC-1A2B2086DECF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

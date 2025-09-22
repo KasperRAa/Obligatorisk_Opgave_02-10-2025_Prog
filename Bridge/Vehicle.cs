@@ -18,18 +18,24 @@ namespace Bridge
         public readonly DateTime Date;
 
         /// <summary>
-        /// The multiplication factor on the price of a ticket
+        /// The multiplication factor on the price of a ticket.
         /// </summary>
-        protected readonly double priceFactor;
+        protected double priceFactor = 1;
 
-        public Vehicle(string licenseplate, bool isBrobizz)
+        /// <summary>
+        /// Constructor for the abstract class Vehicle.
+        /// </summary>
+        /// <param name="licenseplate">The licenseplate for the ticketed vehicle</param>
+        /// <param name="isBrobizz">Whether the has a Brobizz discount applied</param>
+        /// <param name="dateTime">The date of the ticket</param>
+        /// <exception cref="ArgumentException"></exception>
+        public Vehicle(string licenseplate, bool isBrobizz, DateTime dateTime)
         {
             if (licenseplate.Length > 7) throw new ArgumentException($"The licenseplate '{licenseplate}' is too long.");
             Licenseplate = licenseplate;
-            Date = DateTime.Now;
+            Date = dateTime;
 
-            if (isBrobizz) priceFactor = 0.9;
-            else priceFactor = 1.0;
+            if (isBrobizz) priceFactor *= 0.9;
         }
 
         /// <summary>
