@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bridge</name>
+    </assembly>
+    <members>
+        <member name="T:Bridge.Car">
+            <summary>
+            A class for the data of a ticketed car
+            </summary>
+        </member>
+        <member name="M:Bridge.Car.#ctor(System.String)">
+            <summary>
+            Standard-Constructor for Car-ticket.
+            </summary>
+            <param name="licenseplate">The licenseplate</param>
+        </member>
+        <member name="M:Bridge.Car.#ctor(System.String,System.Boolean,System.DateTime)">
+            <summary>
+            Detailed Constructor for Car-ticket.
+            </summary>
+            <param name="licenseplate">The licenseplate</param>
+            <param name="isBrobizz">Whether Brobizz is applied</param>
+            <param name="dateTime">The date of the ticket</param>
+        </member>
+        <member name="M:Bridge.Car.StandardPrice">
+            <summary>
+            Returns the standard price of the ticket.
+            </summary>
+            <returns>230</returns>
+        </member>
+        <member name="M:Bridge.Car.VehicleType">
+            <summary>
+            Returns the type of a Car.
+            </summary>
+            <returns>"Car"</returns>
+        </member>
+        <member name="T:Bridge.MC">
+            <summary>
+            A class for the data of a ticketed MotorCycle
+            </summary>
+        </member>
+        <member name="M:Bridge.MC.#ctor(System.String)">
+            <summary>
+            Standard-Constructor for MC-ticket.
+            </summary>
+            <param name="licenseplate">The licenseplate</param>
+        </member>
+        <member name="M:Bridge.MC.#ctor(System.String,System.Boolean,System.DateTime)">
+            <summary>
+            Detailed Constructor for MC-ticket.
+            </summary>
+            <param name="licenseplate">The licenseplate</param>
+            <param name="isBrobizz">Whether Brobizz is applied</param>
+            <param name="dateTime">The date of the ticket</param>
+        </member>
+        <member name="M:Bridge.MC.StandardPrice">
+            <summary>
+            Returns the standard price of the ticket.
+            </summary>
+            <returns>120</returns>
+        </member>
+        <member name="M:Bridge.MC.VehicleType">
+            <summary>
+            Returns the type of MoterCycle.
+            </summary>
+            <returns>"MC"</returns>
+        </member>
+        <member name="F:Bridge.Vehicle.Licenseplate">
+            <summary>
+            The licenseplate of the ticketed vehicle.
+            </summary>
+        </member>
+        <member name="F:Bridge.Vehicle.Date">
+            <summary>
+            The Date of the ticket.
+            </summary>
+        </member>
+        <member name="F:Bridge.Vehicle.priceFactor">
+            <summary>
+            The multiplication factor on the price of a ticket.
+            </summary>
+        </member>
+        <member name="M:Bridge.Vehicle.#ctor(System.String,System.Boolean,System.DateTime)">
+            <summary>
+            Constructor for the abstract class Vehicle.
+            </summary>
+            <param name="licenseplate">The licenseplate for the ticketed vehicle</param>
+            <param name="isBrobizz">Whether the has a Brobizz discount applied</param>
+            <param name="dateTime">The date of the ticket</param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Bridge.Vehicle.Price">
+            <summary>
+            Returns the price of the ticket.
+            </summary>
+            <returns>Price of the ticket</returns>
+        </member>
+        <member name="M:Bridge.Vehicle.StandardPrice">
+            <summary>
+            The standard price of a ticket.
+            </summary>
+            <returns>Standard price of a ticket</returns>
+        </member>
+        <member name="M:Bridge.Vehicle.VehicleType">
+            <summary>
+            Returns the type of vehicle.
+            </summary>
+            <returns>Type of vehicle</returns>
+        </member>
+    </members>
+</doc>

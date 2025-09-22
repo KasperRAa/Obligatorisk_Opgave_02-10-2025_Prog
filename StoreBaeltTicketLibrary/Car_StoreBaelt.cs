@@ -13,8 +13,18 @@ namespace StoreBaeltTicketLibrary
     /// </summary>
     public class Car_StoreBaelt : Car
     {
+        /// <summary>
+        /// Standard-Constructor for Car-ticket.
+        /// </summary>
+        /// <param name="licenseplate">The licenseplate</param>
         [ExcludeFromCodeCoverage]
         public Car_StoreBaelt(string licenseplate) : base(licenseplate) { }
+        /// <summary>
+        /// Detailed Constructor for Car-ticket.
+        /// </summary>
+        /// <param name="licenseplate">The licenseplate</param>
+        /// <param name="isBrobizz">Whether Brobizz is applied</param>
+        /// <param name="dateTime">The date of the ticket</param>
         [ExcludeFromCodeCoverage]
         public Car_StoreBaelt(string licenseplate, bool isBrobizz, DateTime dateTime) : base(licenseplate, isBrobizz, dateTime) { }
 
