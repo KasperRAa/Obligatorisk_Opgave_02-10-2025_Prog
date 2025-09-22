@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Bridge
 {
     /// <summary>
-    /// A class for the data of a ticketed car
+    /// A class for the data of a ticketed MotorCycle
     /// </summary>
-    public class Car
+    public class MC
     {
         /// <summary>
         /// The licenseplate of the ticketed vehicle.
@@ -23,12 +23,12 @@ namespace Bridge
         /// <summary>
         /// Returns the price of a ticket.
         /// </summary>
-        /// <returns>230</returns>
-        public double Price() => 230;
+        /// <returns>120</returns>
+        public double Price() => 120;
         /// <summary>
         /// Returns the type of vehicle.
         /// </summary>
-        /// <returns>"Car"</returns>
-        public string VehicleType() => "Car";
+        /// <returns>"MC"</returns>
+        public string VehicleType() => "MC";
     }
 }
