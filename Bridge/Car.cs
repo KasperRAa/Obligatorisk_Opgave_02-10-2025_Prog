@@ -9,26 +9,19 @@ namespace Bridge
     /// <summary>
     /// A class for the data of a ticketed car
     /// </summary>
-    public class Car
+    public class Car : Vehicle
     {
-        /// <summary>
-        /// The licenseplate of the ticketed vehicle.
-        /// </summary>
-        public string Licenseplate;
-        /// <summary>
-        /// The Date of the ticket.
-        /// </summary>
-        public DateTime Date;
+        public Car(string licenseplate) : base(licenseplate) { }
 
         /// <summary>
         /// Returns the price of a ticket.
         /// </summary>
         /// <returns>230</returns>
-        public double Price() => 230;
+        public override double Price() => 230;
         /// <summary>
-        /// Returns the type of vehicle.
+        /// Returns the type of a Car.
         /// </summary>
         /// <returns>"Car"</returns>
-        public string VehicleType() => "Car";
+        public override string VehicleType() => "Car";
     }
 }

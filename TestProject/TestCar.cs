@@ -14,7 +14,7 @@ namespace TestProject
         public void TestPrice()
         {
             //Arrange
-            Car car = new Car();
+            Car car = new Car("       ");
 
             //Act
             double price = car.Price();
@@ -27,13 +27,28 @@ namespace TestProject
         public void TestVehicleType()
         {
             //Arrange
-            Car car = new Car();
+            Car car = new Car("       ");
 
             //Act
             string vehicleType = car.VehicleType();
 
             //Assert
             Assert.AreEqual("Car", vehicleType);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestLicenseplateLengthInvalid()
+        {
+            //Arrange, Act & Assert
+            new Car("12345678");
+        }
+
+        [TestMethod]
+        public void TestLicenseplateLengthValid()
+        {
+            //Arrange, Act & Assert
+            new Car("1234567");
         }
     }
 }

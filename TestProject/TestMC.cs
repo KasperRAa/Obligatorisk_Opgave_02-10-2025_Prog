@@ -14,7 +14,7 @@ namespace TestProject
         public void TestPrice()
         {
             //Arrange
-            MC mc = new MC();
+            MC mc = new MC("       ");
 
             //Act
             double price = mc.Price();
@@ -27,13 +27,28 @@ namespace TestProject
         public void TestVehicleType()
         {
             //Arrange
-            MC mc = new MC();
+            MC mc = new MC("       ");
 
             //Act
             string vehicleType = mc.VehicleType();
 
             //Assert
             Assert.AreEqual("MC", vehicleType);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestLicenseplateLengthInvalid()
+        {
+            //Arrange, Act & Assert
+            new MC("12345678");
+        }
+
+        [TestMethod]
+        public void TestLicenseplateLengthValid()
+        {
+            //Arrange, Act & Assert
+            new MC("1234567");
         }
     }
 }

@@ -9,26 +9,19 @@ namespace Bridge
     /// <summary>
     /// A class for the data of a ticketed MotorCycle
     /// </summary>
-    public class MC
+    public class MC : Vehicle
     {
-        /// <summary>
-        /// The licenseplate of the ticketed vehicle.
-        /// </summary>
-        public string Licenseplate;
-        /// <summary>
-        /// The Date of the ticket.
-        /// </summary>
-        public DateTime Date;
+        public MC(string licenseplate) : base(licenseplate) { }
 
         /// <summary>
         /// Returns the price of a ticket.
         /// </summary>
         /// <returns>120</returns>
-        public double Price() => 120;
+        public override double Price() => 120;
         /// <summary>
-        /// Returns the type of vehicle.
+        /// Returns the type of MoterCycle.
         /// </summary>
         /// <returns>"MC"</returns>
-        public string VehicleType() => "MC";
+        public override string VehicleType() => "MC";
     }
 }
