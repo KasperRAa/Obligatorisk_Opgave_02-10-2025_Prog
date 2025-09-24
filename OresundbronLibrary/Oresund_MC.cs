@@ -11,7 +11,7 @@ namespace OresundbronLibrary
     /// <summary>
     /// MC-class for Oresund
     /// </summary>
-    public class Oresund_MC : Car
+    public class Oresund_MC : MC
     {
         /// <summary>
         /// Standard-Constructor for MC-ticket.
