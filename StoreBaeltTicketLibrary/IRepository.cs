@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace StoreBaeltTicketLibrary
 {
+    /// <summary>
+    /// An interface for a repository of Vehicle-Tickets (Oresund)
+    /// </summary>
     public interface IRepository
     {
         /// <summary>
